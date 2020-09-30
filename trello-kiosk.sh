@@ -2,7 +2,11 @@
 TRELLO_URL=https://trello.com/login?returnUrl=$1
 
 # The amount of time to sleep after the browser opened. If your internet connection is slow, increase this number. Otherwise, you could decrease it for faster startup.
-BROWSER_START_TIME=45s
+BROWSER_START_TIME=30s
+
+#amount of time before trying to enter password
+SLEEP_BEFORE_PASSWORD_ENTER=15s
+SLEEP_BEFORE_PASSWORD=5s
 
 # Sleep time between typing.
 SLEEP_TYPE_TIME=1s
@@ -32,14 +36,17 @@ xte "str $USERNAME" -x:0
 sleep $SLEEP_TYPE_TIME;
 
 # Go with tab to the password field.
-xte "key Tab" -x:0
-sleep $SLEEP_TYPE_TIME;
+sleep $SLEEP_BEFORE_PASSWORD;
+xte "key Return" -x:0
+sleep $SLEEP_BEFORE_PASSWORD_ENTER;
 
 # Type in your Trello password.
 xte "str $PASSWORD" -x:0
 sleep $SLEEP_TYPE_TIME;
 
 # Press return in order to load the Trello dashboard.
+xte "key Tab" -x:0
+sleep $SLEEP_TYPE_TIME;
 xte "key Return" -x:0
 
 # Hide the mouse cursor after some seconds if it hasn't moved for a while.
