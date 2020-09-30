@@ -1,4 +1,4 @@
-Edited from Zuehlke for Raspbian Buster support and new atlassian login script 30 Sept 2020
+30 Sept 2020: Edited from Zuehlke for Raspbian Buster support and new atlassian login script
 
 # Trello-Kiosk
 
