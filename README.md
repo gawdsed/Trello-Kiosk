@@ -64,7 +64,11 @@ sudo apt-get install epiphany-browser x11-xserver-utils xautomation unclutter -y
 # Configure autostart
 Edit the autostart file 
 ```
+raspbian Jessie:
 sudo vi ~/.config/lxsession/LXDE-pi/autostart
+
+raspbian Buster:
+sudo vi /etc/xdg/lxsession/LXDE-pi/autostart
 ```
 
 Add these lines to the autostart file. For the last line, replace your relative path to your Trello dashboard and the user as well as its password.
