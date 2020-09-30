@@ -1,3 +1,5 @@
+Edited from Zuehlke for Raspbian Buster support and new atlassian login script 30 Sept 2020
+
 # Trello-Kiosk
 
 This script enables you to display a Trello dashboard with a RaspberryPi after startup. Currently, it supports Raspbian Jessie.
